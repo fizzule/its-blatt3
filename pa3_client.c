@@ -20,7 +20,7 @@ int main(int argc, char **argv){
     if(argc>=5){
        strncpy(server_adress, argv[1], sizeof server_adress);
        strncpy(server_port, argv[2], sizeof server_port);
-       strncpy(username, argv[2], sizeof username);
+       strncpy(username, argv[3], sizeof username);
      
        printf("Server Adress: %s\n", server_adress);
        printf("Server Port: %s\n", server_port);
