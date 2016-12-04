@@ -22,8 +22,8 @@ int main(int argc, char **argv){
        strncpy(server_port, argv[2], sizeof server_port);
        strncpy(username, argv[2], sizeof username);
      
-       printf("Server Adress: %s\n", aserver_adress);
-       printf("Server Port: %s\n", aserver_port);
+       printf("Server Adress: %s\n", server_adress);
+       printf("Server Port: %s\n", server_port);
        printf("Username: %s\n", username);
        
     }
