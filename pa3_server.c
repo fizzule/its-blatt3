@@ -2,7 +2,7 @@
 #include<stdlib.h>    //malloc
 #include<string.h>    //für strings
 #include<sys/socket.h>
-#include<netinet/in.h>
+#include<arpa/inet.h>
 #include <signal.h> //Damit ich Signale abfangen kann
 
 char server_port[65536];
