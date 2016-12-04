@@ -2,9 +2,9 @@
 #include<stdlib.h>    //malloc
 #include<string.h>    //für strings
 
-server_adress[65536];
-server_port[65536];
-username[65536];
+char server_adress[65536];
+char server_port[65536];
+char username[65536];
 char message[65536];
 
 int check_parameters();
