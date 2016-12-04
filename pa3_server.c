@@ -48,7 +48,6 @@ int main(int argc, char **argv){
         
        struct sockaddr_in si_me, si_other;
        int s, i, slen=sizeof(si_other);
-       char buf[BUFLEN];
        if ((s=socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP))==-1){
             return 1;
        }
@@ -62,10 +61,10 @@ int main(int argc, char **argv){
        }
         
         while(listen){
-           if (recvfrom(s, buf, BUFLEN, 0, &si_other, &slen)==-1){
+           if (recvfrom(s, buffer, 65536, 0, &si_other, &slen)==-1){
                 return 1;
            }
-            printf("Received packet from %s:%d\nData: %s\n\n", inet_ntoa(si_other.sin_addr), ntohs(si_other.sin_port), buf);
+            printf("Received packet from %s:%d\nData: %s\n\n", inet_ntoa(si_other.sin_addr), ntohs(si_other.sin_port), buffer);
         }   
         
         if(debug){
