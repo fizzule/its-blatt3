@@ -3,6 +3,7 @@
 #include<string.h>    //für strings
 #include<sys/socket.h>
 #include<netinet/in.h>
+#include <signal.h> //Damit ich Signale abfangen kann
 
 char server_port[65536];
 int debug = 1;
